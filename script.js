@@ -17,11 +17,11 @@ function getAge(bvalue) {
   let age = currentdate.getFullYear() - bdate.getFullYear();
   let month = currentdate.getMonth() - bdate.getMonth();
 
-  if (month < 0 || (month === 0 && currentdate.getDate() < bdate.getDate())) {
-    age--;
-  }
-  else if (age < 0){
+  if (age < 0) {
     age = 0;
+  }
+  else if (month < 0 || (month === 0 && currentdate.getDate() < bdate.getDate())) {
+    age--;
   }
   return age;
 }
