@@ -20,6 +20,9 @@ function getAge(bvalue) {
   if (month < 0 || (month === 0 && currentdate.getDate() < bdate.getDate())) {
     age--;
   }
+  else if (age < 0){
+    age = 0;
+  }
   return age;
 }
 btn.addEventListener("click", calculateAge);
